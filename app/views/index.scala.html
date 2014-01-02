@@ -1,7 +1,22 @@
 @(message: String)
 
-@main("Welcome to Play") {
+@main(models.ui.Meta("San Vito climbing", "San Vito climbing", "en")) {
 
-    @play20.welcome(message)
+<body id="index">
+    <div id="indexMainLine">
+        <div style="position: relative">
+            <div style="float:left">
+                <h1>San Vito Climbing Paradise</h1>
+                <div>Your best climbing holidays.</div>
+            </div>
+            <ol id="indexLanguages">
+                <li>English</li>
+                <li>Deutsch</li>
+                <li>Slovensky</li>
+                <li>Italiano</li>
+            </ol>
+        </div>
+    </div>
+</div>
 
 }

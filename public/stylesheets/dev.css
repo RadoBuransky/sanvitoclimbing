@@ -1,0 +1,30 @@
+body#index {
+    background: url(/assets/images/photos/index01.jpg) center center fixed;
+    background-size: cover;
+}
+
+#indexMainLine {
+    width: 100%;
+    background-color: #FF530D;
+    padding: 30px 60px 30px 60px;
+    position: absolute;
+    bottom: 80px;
+    font-weight: bold;
+}
+
+#indexMainLine h1 {
+    margin: 0;
+    font-weight: 800;
+}
+
+#indexLanguages {
+    list-style-type: none;
+    float: right;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#indexLanguages li {
+    display: inline;
+    padding: 0 0 0 15px;
+}
