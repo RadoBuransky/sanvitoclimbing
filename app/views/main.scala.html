@@ -1,8 +1,8 @@
-@(meta: models.ui.Meta)(content: Html)
+@(meta: models.ui.Meta)(content: Html)(implicit lang: Lang)
 
 <!DOCTYPE html>
 
-<html lang="@meta.language">
+<html lang="@lang.language">
     <head>
         <title>@meta.title</title>
         <meta name="description" content="@meta.description"/>
@@ -30,6 +30,11 @@
         <!-- TODO:
         <meta name="twitter:image" content="")"/>
         -->
+
+        <link href="/en" rel="alternate" hreflang="en">
+        <link href="/de" rel="alternate" hreflang="de">
+        <link href="/sk" rel="alternate" hreflang="sk">
+        <link href="/it" rel="alternate" hreflang="it">
 
         <!-- Styles -->
         <link href="@routes.Assets.at("stylesheets/main.css")" rel="stylesheet">

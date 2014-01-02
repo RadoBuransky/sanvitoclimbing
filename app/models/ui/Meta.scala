@@ -1,9 +1,11 @@
 package models.ui
 
-/**
- * Created by rado on 01/01/14.
- */
+import play.api.mvc.{WrappedRequest, AnyContent, Request}
+
+case class CommonContext(
+  meta: Meta,
+  request: Request[AnyContent]) extends WrappedRequest(request)
+
 case class Meta(
   title: String,
-  description: String,
-  language: String)
+  description: String)
