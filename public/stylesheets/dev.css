@@ -28,3 +28,8 @@ body#index {
     display: inline;
     padding: 0 0 0 15px;
 }
+
+.widecontainer {
+    width: 100%;
+    margin: 0;
+}

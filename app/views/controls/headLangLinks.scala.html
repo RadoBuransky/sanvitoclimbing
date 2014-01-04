@@ -1,0 +1,9 @@
+@(context: models.ui.CommonContext, lang: Lang)
+
+@if(context.isLangUri) {
+    @for(l <- common.SupportedLang.values) {
+        @if(l.toString != lang.language) {
+            <link href="/@l@context.langlessUri" rel="alternate" hreflang="@l">
+        }
+    }
+}

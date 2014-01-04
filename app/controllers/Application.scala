@@ -9,12 +9,16 @@ import common.SupportedLang
 
 object Application extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  def index = withCommonContext { context => lang =>
+    Ok(views.html.index(context, lang))
   }
 
-  def langIndex(lang: String) = withCommonContext { implicit context => implicit lang =>
-    Ok(views.html.langIndex("aaa"))
+  def langIndex(lang: String) = withCommonContext { context => lang =>
+    Ok(views.html.langIndex(context, lang))
+  }
+
+  def gallery(lang: String) = withCommonContext { context => lang =>
+    Ok(views.html.langIndex(context, lang))
   }
 
   def untrail(path: String) = Action {

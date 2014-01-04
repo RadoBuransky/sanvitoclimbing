@@ -4,7 +4,7 @@ import play.api.i18n.Lang
 
 object SupportedLang extends Enumeration {
   type SupportedLang = Value
-  val en, de, sk, it = Value
+  val en, de, sk, pl, it = Value
 
   class SupportedLangValue(supportedLang: Value) {
     def toLang(): Lang = {

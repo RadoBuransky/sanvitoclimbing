@@ -1,7 +1,8 @@
 GET     /                           controllers.Application.index
 GET     /*path/                     controllers.Application.untrail(path: String)
 
-GET     /$lang<en|de|sk|it>         controllers.Application.langIndex(lang: String)
+GET     /$lang<en|de|sk|pl|it>              controllers.Application.langIndex(lang: String)
+GET     /$lang<en|de|sk|pl|it>/gallery      controllers.Application.gallery(lang: String)
 
 GET     /robots.txt 				controllers.Assets.at(path="/public", file="robots.txt")
 GET     /sitemap.xml 				controllers.Assets.at(path="/public", file="sitemap.xml")

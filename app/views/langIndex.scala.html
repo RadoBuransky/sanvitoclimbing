@@ -1,9 +1,44 @@
-@(message: String)(implicit cc: models.ui.CommonContext, lang: Lang)
+@(implicit context: models.ui.CommonContext, lang: Lang)
 
-@main(cc.meta) {
-
-<h1>San Vito Climbing Paradise - @message</h1>
-<h2>@lang</h2>
-<h3>@Messages("test")</h3>
-
+@langMain {
+    <div class="widecontainer" style="background-color: #F33">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Úvod</h2>
+                </div>
+                <img src="@routes.Assets.at("images/photos/index01.jpg")" class="col-md-6 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <div class="widecontainer" style="background-color: #3F3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Zápletka</h2>
+                </div>
+                <img src="@routes.Assets.at("images/photos/index01.jpg")" class="col-md-6 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <div class="widecontainer" style="background-color: #33F">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Rozuzlenie</h2>
+                </div>
+                <img src="@routes.Assets.at("images/photos/index01.jpg")" class="col-md-6 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <div class="widecontainer" style="background-color: #FF3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Záver</h2>
+                </div>
+                <img src="@routes.Assets.at("images/photos/index01.jpg")" class="col-md-6 col-xs-12">
+            </div>
+        </div>
+    </div>
 }

@@ -1,11 +1,11 @@
-@(meta: models.ui.Meta)(content: Html)(implicit lang: Lang)
+@(content: Html)(implicit context: models.ui.CommonContext, lang: Lang)
 
 <!DOCTYPE html>
 
 <html lang="@lang.language">
     <head>
-        <title>@meta.title</title>
-        <meta name="description" content="@meta.description"/>
+        <title>@Messages(context.meta.title)</title>
+        <meta name="description" content="@Messages(context.meta.description)"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="application-name" content="San Vito climbing"/>
 
@@ -15,9 +15,9 @@
         <link rel="author" href="https://plus.google.com/+radoburansky/"/>
 
         <!-- Facebook -->
-        <meta property="og:title" content="@meta.title"/>
+        <meta property="og:title" content="@Messages(context.meta.title)"/>
         <meta property="og:type" content="article"/>
-        <meta property="og:description" content="@meta.description"/>
+        <meta property="og:description" content="@Messages(context.meta.description)"/>
         <!-- TODO:
         <meta property="og:image" content=""/>
         <meta property="fb:admins" content="608441607" />
@@ -25,16 +25,13 @@
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="@meta.title">
-        <meta name="twitter:description" content="@meta.description">
+        <meta name="twitter:title" content="@Messages(context.meta.title)">
+        <meta name="twitter:description" content="@Messages(context.meta.description)">
         <!-- TODO:
         <meta name="twitter:image" content="")"/>
         -->
 
-        <link href="/en" rel="alternate" hreflang="en">
-        <link href="/de" rel="alternate" hreflang="de">
-        <link href="/sk" rel="alternate" hreflang="sk">
-        <link href="/it" rel="alternate" hreflang="it">
+        @controls.headLangLinks(context, lang)
 
         <!-- Styles -->
         <link href="@routes.Assets.at("stylesheets/main.css")" rel="stylesheet">
